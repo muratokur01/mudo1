@@ -180,6 +180,11 @@ footer {
     border-radius: 0;
   }
 
+  main::before {
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+
   .selo {
     font-size: 30px;
     width: 100vw;
