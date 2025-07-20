@@ -1,15 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url('arkaplan.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    overflow-x: hidden; /* yatay scrollu kapatır */
-}
+/* Temel sıfırlama ve kutu modeli */
 * {
   box-sizing: border-box;
 }
@@ -17,174 +6,189 @@ body {
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Yatay kaydırmayı engelle */
-  width: 100vw;       /* Genişliği viewport ile sınırla */
+  overflow-x: hidden; /* yatay scroll kapat */
+  width: 100vw;       /* genişliği viewport ile sınırla */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-image: url('arkaplan.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 /* Header (üst çubuk) */
 header {
-    background-color: transparent;
-    padding: 0;
-    margin: 0;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
 }
 
 /* Navbar alanı */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #3a3736;
-    padding: 15px 30px;
-    color: white;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-bottom: 2px solid #2c2c2c;
-    border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3a3736;
+  padding: 15px 30px;
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 2px solid #2c2c2c;
+  border-radius: 0 0 10px 10px;
 }
 
 /* Logo kısmı */
 .navbar .logo {
-    font-size: 32px;
-    font-weight: bold;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 /* Menü linkleri */
 .navbar .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s ease;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 .navbar .nav-links li a:hover {
-    color: #ffe9d6;
+  color: #ffe9d6;
 }
 
 /* Ana içerik */
 main {
-    max-width: 800px;
-    margin: 40px auto;
-    background-image: url('arkaplanm.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 40px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    z-index: 1;
-    position: relative;
-    color: #000;
+  max-width: 800px;
+  width: 95vw;      /* Maks 800px, mobilde ekranın %95'i kadar */
+  margin: 40px auto;
+  padding: 40px 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  position: relative;
+  background-image: url('arkaplanm.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000;
 }
 
 main::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  z-index: -1;
 }
 
 /* Başlıklar */
 section h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
+  font-size: 24px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
 }
 
 /* Menü öğeleri */
 .menu-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px dashed #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ffffff;
 }
 
 .menu-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .menu-item .name {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .menu-item .price {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(to right, #000000, #222222);
-    color: white;
-    margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #000000, #222222);
+  color: white;
+  margin-top: 40px;
 }
 
 /* Sayfa içeriği - iletişim ve hakkımızda */
 #iletisim,
 #hakkimizda {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #3b3333;
-    border-radius: 8px;
+  max-width: 800px;
+  width: 95vw;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #3b3333;
+  border-radius: 8px;
+  color: white;
 }
 
 /* selo başlık alanı */
 .selo {
-    padding: 10px 20px;
-    font-size: 60px;
-    color: aliceblue;
-    text-align: center;
+  width: 95vw;
+  max-width: 800px;
+  margin: 10px auto;
+  font-size: 60px;
+  color: aliceblue;
+  text-align: center;
+  padding: 10px 20px;
 }
 
 /* MOBİL UYUMLULUK için media query */
 @media (max-width: 700px) {
-    main {
-        max-width: 100vw;
-        margin: 0;
-        padding: 20px;
-        box-shadow: none;
-        border-radius: 0;
-    }
+  main {
+    max-width: 100vw;
+    width: 100vw;
+    margin: 0;
+    padding: 15px;
+    box-shadow: none;
+    border-radius: 0;
+  }
 
-    .menu-item {
-        flex-direction: column;
-        gap: 6px;
-    }
+  .selo {
+    font-size: 30px;
+    width: 100vw;
+    margin: 0;
+    padding: 10px;
+  }
 
-    .menu-item .price {
-        text-align: right;
-    }
+  .menu-item {
+    flex-direction: column;
+    gap: 6px;
+  }
 
-    .selo {
-        font-size: 30px;
-        padding: 10px 10px;
-    }
+  .menu-item .price {
+    text-align: right;
+  }
 
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px 15px;
-    }
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 15px;
+  }
 
-    .navbar .nav-links {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
 }
